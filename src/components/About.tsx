@@ -148,48 +148,5 @@ const About: React.FC = () => {
     </section>
   );
 };
-              Notre mission
-            </h3>
-            <p className="text-gray-600 mb-6 leading-relaxed">
-              Depuis notre création, nous nous efforçons de repousser les limites de l'innovation 
-              technologique. Notre approche centrée sur l'utilisateur nous permet de créer des 
-              expériences digitales qui non seulement répondent aux besoins actuels, mais 
-              anticipent également les défis de demain.
-            </p>
-            <p className="text-gray-600 leading-relaxed">
-              Chaque projet est une opportunité de démontrer notre expertise technique et notre 
-              créativité, en livrant des solutions qui dépassent les attentes de nos clients.
-            </p>
-          </div>
-          
-          <div className="relative">
-            <div className="aspect-square bg-gradient-to-br from-indigo-100 to-purple-100 rounded-2xl p-8 flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-24 h-24 bg-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-12 h-12 text-white" />
-                </div>
-                <h4 className="text-xl font-semibold text-gray-900 mb-2">Excellence</h4>
-                <p className="text-gray-600">Notre engagement envers la qualité</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <stat.icon className="w-8 h-8 text-indigo-600" />
-              </div>
-              <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
-              <div className="text-gray-600">{stat.label}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
 
 export default About;
