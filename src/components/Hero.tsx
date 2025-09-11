@@ -16,7 +16,6 @@ const Hero: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="text-center lg:text-left">
-            <div className="flex items-center justify-center lg:justify-start space-x-6 mb-8 text-sm text-gray-600 animate-fade-in">
           <div className="flex items-center justify-center space-x-6 mb-8 text-sm text-gray-600">
             <div className="flex items-center space-x-1">
               <Star className="w-4 h-4 text-yellow-400 fill-current" />
@@ -35,21 +34,18 @@ const Hero: React.FC = () => {
             </div>
           </div>
 
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-800 text-sm font-medium mb-8 animate-bounce animate-fade-in-up animation-delay-500">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-800 text-sm font-medium mb-8 animate-bounce">
             <Sparkles className="w-4 h-4 mr-2" />
             🎉 Nouvelle version 2.0 disponible
           </div>
 
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight animate-fade-in-up animation-delay-1000">
-              <span className="animate-type-writer">Créez des expériences</span>
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 animate-fade-in-up animation-delay-2000">
-                extraordinaires
+           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+             <span className="animate-type-writer">Créez des expériences</span>
+             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600">
               {' '}extraordinaires
             </span>
           </h1>
 
-            <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto lg:mx-0 leading-relaxed animate-fade-in-up animation-delay-2500">
           <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
             Une plateforme révolutionnaire qui combine <span className="font-semibold text-indigo-600">IA avancée</span>, 
             <span className="font-semibold text-purple-600"> design moderne</span> et 
@@ -57,7 +53,6 @@ const Hero: React.FC = () => {
             transformer vos idées en réalité digitale.
           </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8 animate-fade-in-up animation-delay-3000">
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Link
               to="/getting-started"
@@ -76,8 +71,6 @@ const Hero: React.FC = () => {
             </Link>
           </div>
 
-            <div className="mb-16 animate-fade-in-up animation-delay-3500">
-              <p className="text-sm text-gray-500 mb-4">Utilisé par les meilleures entreprises</p>
             <p className="text-sm text-gray-500 mb-4">Utilisé par les meilleures entreprises</p>
             <div className="flex items-center justify-center space-x-8 opacity-60">
               <div className="w-24 h-8 bg-gray-300 rounded flex items-center justify-center text-xs font-bold">TECH CORP</div>
@@ -86,9 +79,8 @@ const Hero: React.FC = () => {
               <div className="w-24 h-8 bg-gray-300 rounded flex items-center justify-center text-xs font-bold">DIGITAL+</div>
             </div>
           </div>
-          </div>
           {/* Right Content - Hero Image */}
-          <div className="relative animate-fade-in-right animation-delay-1500">
+          <div className="relative">
             <div className="relative">
               {/* Main Hero Image */}
               <img 
@@ -148,7 +140,6 @@ const Hero: React.FC = () => {
               <p className="text-gray-600 text-center">IA générative et interface adaptative révolutionnaire</p>
             </div>
           </div>
-        </div>
         </div>
       </div>
     </section>
