@@ -13,8 +13,10 @@ const Hero: React.FC = () => {
       </div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
-        <div className="text-center">
-          {/* Social Proof */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left Content */}
+          <div className="text-center lg:text-left">
+            <div className="flex items-center justify-center lg:justify-start space-x-6 mb-8 text-sm text-gray-600 animate-fade-in">
           <div className="flex items-center justify-center space-x-6 mb-8 text-sm text-gray-600">
             <div className="flex items-center space-x-1">
               <Star className="w-4 h-4 text-yellow-400 fill-current" />
@@ -33,21 +35,21 @@ const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Badge */}
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-800 text-sm font-medium mb-8 animate-bounce animate-fade-in-up animation-delay-500">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-800 text-sm font-medium mb-8 animate-bounce">
             <Sparkles className="w-4 h-4 mr-2" />
             🎉 Nouvelle version 2.0 disponible
           </div>
 
-          {/* Main heading */}
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Créez des expériences
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 animate-gradient-x">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight animate-fade-in-up animation-delay-1000">
+              <span className="animate-type-writer">Créez des expériences</span>
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 animate-fade-in-up animation-delay-2000">
+                extraordinaires
               {' '}extraordinaires
             </span>
           </h1>
 
-          {/* Subtitle */}
+            <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto lg:mx-0 leading-relaxed animate-fade-in-up animation-delay-2500">
           <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
             Une plateforme révolutionnaire qui combine <span className="font-semibold text-indigo-600">IA avancée</span>, 
             <span className="font-semibold text-purple-600"> design moderne</span> et 
@@ -55,7 +57,7 @@ const Hero: React.FC = () => {
             transformer vos idées en réalité digitale.
           </p>
 
-          {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8 animate-fade-in-up animation-delay-3000">
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Link
               to="/getting-started"
@@ -74,8 +76,8 @@ const Hero: React.FC = () => {
             </Link>
           </div>
 
-          {/* Trust Indicators */}
-          <div className="mb-16">
+            <div className="mb-16 animate-fade-in-up animation-delay-3500">
+              <p className="text-sm text-gray-500 mb-4">Utilisé par les meilleures entreprises</p>
             <p className="text-sm text-gray-500 mb-4">Utilisé par les meilleures entreprises</p>
             <div className="flex items-center justify-center space-x-8 opacity-60">
               <div className="w-24 h-8 bg-gray-300 rounded flex items-center justify-center text-xs font-bold">TECH CORP</div>
@@ -84,10 +86,45 @@ const Hero: React.FC = () => {
               <div className="w-24 h-8 bg-gray-300 rounded flex items-center justify-center text-xs font-bold">DIGITAL+</div>
             </div>
           </div>
+          </div>
+          {/* Right Content - Hero Image */}
+          <div className="relative animate-fade-in-right animation-delay-1500">
+            <div className="relative">
+              {/* Main Hero Image */}
+              <img 
+                src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" 
+                alt="Équipe travaillant sur des projets innovants"
+                className="w-full h-96 object-cover rounded-2xl shadow-2xl animate-float"
+              />
+              
+              {/* Floating Cards */}
+              <div className="absolute -top-6 -left-6 bg-white p-4 rounded-xl shadow-lg animate-float animation-delay-1000">
+                <div className="flex items-center space-x-2">
+                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                  <span className="text-sm font-medium">En ligne</span>
+                </div>
+              </div>
+              
+              <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-4 rounded-xl shadow-lg animate-float animation-delay-2000">
+                <div className="text-sm font-bold">+127%</div>
+                <div className="text-xs opacity-90">Performance</div>
+              </div>
+              
+              <div className="absolute top-1/2 -right-8 bg-white p-3 rounded-full shadow-lg animate-bounce animation-delay-3000">
+                <Zap className="w-6 h-6 text-yellow-500" />
+              </div>
+            </div>
+            
+            {/* Background decoration */}
+            <div className="absolute -z-10 top-8 left-8 w-full h-full bg-gradient-to-br from-indigo-100 to-purple-100 rounded-2xl opacity-50"></div>
+          </div>
+        </div>
 
+        {/* Features Section */}
+        <div className="mt-20">
           {/* Features */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="group flex flex-col items-center p-6 bg-white/80 backdrop-blur-sm rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-white/50">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto animate-fade-in-up animation-delay-4000">
+            <div className="group flex flex-col items-center p-6 bg-white/80 backdrop-blur-sm rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-white/50 animate-fade-in-up animation-delay-4500">
               <div className="w-12 h-12 bg-gradient-to-br from-indigo-100 to-indigo-200 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Zap className="w-6 h-6 text-indigo-600" />
               </div>
@@ -95,7 +132,7 @@ const Hero: React.FC = () => {
               <p className="text-gray-600 text-center">Performance optimisée avec les dernières technologies IA</p>
             </div>
 
-            <div className="group flex flex-col items-center p-6 bg-white/80 backdrop-blur-sm rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-white/50">
+            <div className="group flex flex-col items-center p-6 bg-white/80 backdrop-blur-sm rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-white/50 animate-fade-in-up animation-delay-5000">
               <div className="w-12 h-12 bg-gradient-to-br from-purple-100 to-purple-200 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Shield className="w-6 h-6 text-purple-600" />
               </div>
@@ -103,7 +140,7 @@ const Hero: React.FC = () => {
               <p className="text-gray-600 text-center">Chiffrement de niveau militaire et conformité RGPD</p>
             </div>
 
-            <div className="group flex flex-col items-center p-6 bg-white/80 backdrop-blur-sm rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-white/50">
+            <div className="group flex flex-col items-center p-6 bg-white/80 backdrop-blur-sm rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-white/50 animate-fade-in-up animation-delay-5500">
               <div className="w-12 h-12 bg-gradient-to-br from-green-100 to-green-200 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Sparkles className="w-6 h-6 text-green-600" />
               </div>
@@ -111,6 +148,7 @@ const Hero: React.FC = () => {
               <p className="text-gray-600 text-center">IA générative et interface adaptative révolutionnaire</p>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </section>

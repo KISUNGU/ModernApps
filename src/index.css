@@ -3,10 +3,6 @@
 @tailwind utilities;
 
 @layer utilities {
-  .animate-gradient-x {
-    animation: gradient-x 3s ease infinite;
-  }
-  
   .animate-float {
     animation: float 6s ease-in-out infinite;
   }
@@ -15,27 +11,112 @@
     animation: spin 8s linear infinite;
   }
   
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+    opacity: 0;
+  }
+  
+  .animate-fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  
+  .animate-fade-in-right {
+    animation: fadeInRight 1s ease-out forwards;
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  
+  .animate-type-writer {
+    animation: typeWriter 2s steps(20) forwards;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid transparent;
+  }
+  
+  .animation-delay-500 {
+    animation-delay: 0.5s;
+  }
+  
   .animation-delay-1000 {
     animation-delay: 1s;
+  }
+  
+  .animation-delay-1500 {
+    animation-delay: 1.5s;
   }
   
   .animation-delay-2000 {
     animation-delay: 2s;
   }
   
+  .animation-delay-2500 {
+    animation-delay: 2.5s;
+  }
+  
+  .animation-delay-3000 {
+    animation-delay: 3s;
+  }
+  
+  .animation-delay-3500 {
+    animation-delay: 3.5s;
+  }
+  
   .animation-delay-4000 {
     animation-delay: 4s;
   }
+  
+  .animation-delay-4500 {
+    animation-delay: 4.5s;
+  }
+  
+  .animation-delay-5000 {
+    animation-delay: 5s;
+  }
+  
+  .animation-delay-5500 {
+    animation-delay: 5.5s;
+  }
 }
 
-@keyframes gradient-x {
-  0%, 100% {
-    background-size: 200% 200%;
-    background-position: left center;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  50% {
-    background-size: 200% 200%;
-    background-position: right center;
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes typeWriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
   }
 }
 
