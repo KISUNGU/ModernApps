@@ -79,7 +79,7 @@ export default function Hero() {
                 <div className="text-sm text-gray-600">Uptime</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900">< 100ms</div>
+                <div className="text-2xl font-bold text-gray-900">&lt; 100ms</div>
                 <div className="text-sm text-gray-600">Latence</div>
               </div>
               <div className="text-center">
