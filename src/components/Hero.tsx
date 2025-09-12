@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowRight, Play, Users, Zap, Star, CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Hero() {
   const [currentText, setCurrentText] = useState('');
@@ -62,10 +63,13 @@ export default function Hero() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
-              <button className="group bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
+              <Link 
+                to="/app-builder"
+                className="group bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl inline-flex items-center justify-center"
+              >
                 Commencer maintenant
                 <ArrowRight className="inline-block w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </button>
+              </Link>
               <button className="group bg-white/80 backdrop-blur-sm text-gray-700 px-8 py-4 rounded-xl font-semibold hover:bg-white border border-gray-200 hover:border-gray-300 transform hover:scale-105 transition-all duration-200">
                 <Play className="inline-block w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
                 Voir la démo
