@@ -472,12 +472,19 @@ const AppBuilder: React.FC = () => {
 
               <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2">
+                <Link
+                  to="/accept-quote"
+                  className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2"
+                >
                   <span>Accepter le devis</span>
                   <ArrowRight className="w-5 h-5" />
-                </button>
-                <button className="border-2 border-indigo-600 text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-50 transition-colors duration-300">
+                </Link>
+                <Link
+                  to="/modify-needs"
+                  className="border-2 border-indigo-600 text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-50 transition-colors duration-300"
+                >
                   Modifier les besoins
-                </button>
+                </Link>
               </div>
             </div>
           </div>

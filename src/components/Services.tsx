@@ -1,9 +1,11 @@
 import React from 'react';
 import { Code, Smartphone, Globe, Database, Palette, BarChart, ArrowRight, CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Services: React.FC = () => {
   const services = [
     {
+      id: 'web-development',
       icon: Code,
       title: 'Développement Web',
       description: 'Applications web révolutionnaires avec IA intégrée et performance exceptionnelle.',
@@ -13,6 +15,7 @@ const Services: React.FC = () => {
       image: 'https://images.pexels.com/photos/11035380/pexels-photo-11035380.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&fit=crop'
     },
     {
+      id: 'mobile-development',
       icon: Smartphone,
       title: 'Applications Mobile',
       description: 'Apps mobiles intelligentes avec expérience utilisateur immersive.',
@@ -22,6 +25,7 @@ const Services: React.FC = () => {
       image: 'https://images.pexels.com/photos/147413/twitter-facebook-together-exchange-of-information-147413.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&fit=crop'
     },
     {
+      id: 'cloud-solutions',
       icon: Globe,
       title: 'Solutions Cloud',
       description: 'Infrastructure cloud de nouvelle génération avec IA prédictive.',
@@ -31,6 +35,7 @@ const Services: React.FC = () => {
       image: 'https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&fit=crop'
     },
     {
+      id: 'data-management',
       icon: Database,
       title: 'Gestion de Données',
       description: 'Big Data et analytics avec machine learning intégré.',
@@ -40,6 +45,7 @@ const Services: React.FC = () => {
       image: 'https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&fit=crop'
     },
     {
+      id: 'ux-ui-design',
       icon: Palette,
       title: 'Design UX/UI',
       description: 'Design révolutionnaire avec psychologie comportementale.',
@@ -49,6 +55,7 @@ const Services: React.FC = () => {
       image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&fit=crop'
     },
     {
+      id: 'analytics-bi',
       icon: BarChart,
       title: 'Analytics & BI',
       description: 'Intelligence artificielle pour insights business révolutionnaires.',
@@ -133,10 +140,13 @@ const Services: React.FC = () => {
                   </ul>
                 </div>
                 
-                <button className="group/btn w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 transform hover:scale-105">
+                <Link
+                  to={`/service/${service.id}`}
+                  className="group/btn w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 transform hover:scale-105"
+                >
                   <span>Découvrir</span>
                   <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
-                </button>
+                </Link>
               </div>
             </div>
           ))}
