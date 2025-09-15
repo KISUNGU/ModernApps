@@ -31,20 +31,20 @@ const Contact: React.FC = () => {
     {
       icon: Mail,
       title: 'Email',
-      value: 'contact@modernapp.com',
-      link: 'mailto:contact@modernapp.com'
+      value: 'contact@realsweet.com',
+      link: 'mailto:contact@realsweet.com'
     },
     {
       icon: Phone,
       title: 'Téléphone',
-      value: '+33 1 23 45 67 89',
-      link: 'tel:+33123456789'
+      value: '+243 81 00 54 0 94',
+      link: 'tel:+243810054094'
     },
     {
       icon: MapPin,
       title: 'Adresse',
-      value: '123 Avenue des Champs-Élysées, 75008 Paris',
-      link: 'https://maps.google.com'
+      value: 'imm. 110 Croisement Blvd 30 juin - Av. 24 Novembre, Kinshasa/Gombe, RDC',
+      link: 'https://realsweet.com'
     }
   ];
 
